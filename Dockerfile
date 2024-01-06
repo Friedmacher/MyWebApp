@@ -15,7 +15,7 @@ CMD dotnet run --no-launch-profile
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS final
 WORKDIR /app
-COPY --from=build /app .
+COPY --from=build /source/MyWebApp .
 ARG UID=10001
 RUN adduser \
     --disabled-password \
